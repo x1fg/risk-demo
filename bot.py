@@ -22,7 +22,7 @@ class DealForm(StatesGroup):
 async def start_handler(message: Message, state: FSMContext):
     await message.answer("Добрый день!\nВас приветсвует агентная система оценки рисков.")
     await asyncio.sleep(1)
-    await message.answer('Введите название компании.\nПример: "ОАО Демо компания".')
+    await message.answer('Введите название компании.\nПример: "ПАО Демо компания".')
     await state.set_state(DealForm.company_name)
 
 @dp.message(DealForm.company_name)
