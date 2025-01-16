@@ -78,11 +78,13 @@ async def handle_deal_info(message: Message, state: FSMContext):
     await message.answer("Необходимо проанализировать Акционеров, Бенифициаров и Лиц принимающих решение.")
     await asyncio.sleep(1)
     await message.answer(f"Обращение к Кредитной машине ФЛ, AEF")
+    await asyncio.sleep(1)
     await message.answer(f"⚙️Вызов Агента Оценки ФЛ")
     await asyncio.sleep(1)
     await message.answer(
         "Получение заключения от Агента ФЛ"
     )
+    await asyncio.sleep(1)
     await message.answer(f"Формирование финального заключения")
     await asyncio.sleep(3)
     await message.answer(
