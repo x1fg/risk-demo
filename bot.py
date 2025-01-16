@@ -4,9 +4,12 @@ from aiogram.filters import Command
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.storage.memory import MemoryStorage
+from dotenv import load_dotenv
 import asyncio
+import os
 
-API_TOKEN = '' 
+load_dotenv()
+API_TOKEN = os.getenv("TELEGRAM_API_TOKEN")
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(storage=MemoryStorage())
