@@ -39,7 +39,7 @@ async def handle_company_name(message: Message, state: FSMContext):
     await asyncio.sleep(2)
     await message.answer('Данные по сделке успешно получены из систем.')
     await asyncio.sleep(1)
-    await message.answer('Введите дополнительные подробности сделки(оционально).\n\nЕсли дополнительных подробнейсте нет, введите "Нет дополнительной информации."')
+    await message.answer('Введите дополнительные подробности сделки(оционально).\n\nЕсли дополнительных подробностей нет, введите:\n "Нет дополнительной информации."')
     await state.set_state(DealForm.deal_info)
 
 @dp.message(DealForm.deal_info)
