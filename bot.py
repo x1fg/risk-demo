@@ -53,7 +53,7 @@ async def handle_deal_info(message: Message, state: FSMContext):
     await asyncio.sleep(1)
     await message.answer(f"Векторизация полученной информации.")
     await asyncio.sleep(1)
-    await message.answer(f"⚙️Вызов Agent Эксперт оценки маркетингового риска.")
+    await message.answer(f"⚙️Вызов Агента Эксперт оценки маркетингового риска.")
     await asyncio.sleep(1)
     await message.answer(
         "*Обращение к внешним данным для получения дополнительной информации:*\n\n"
@@ -65,10 +65,10 @@ async def handle_deal_info(message: Message, state: FSMContext):
         parse_mode="Markdown"
     )
     await asyncio.sleep(1)
-    await message.answer(f"⚙️Вызов Agent Эксперт деловой репутации")
+    await message.answer(f"⚙️Вызов Агента Эксперт деловой репутации")
     await asyncio.sleep(1)
     await message.answer(
-        "*Выбор необходимых тулов:*\n\n"
+        "*Выбор необходимых инструментов:*\n\n"
         "• API анализ ФЛ\n"
         "• API доступ к правовой информации\n"
         "• API поиск\n",
@@ -76,17 +76,10 @@ async def handle_deal_info(message: Message, state: FSMContext):
     )
     await asyncio.sleep(1)
     await message.answer(f"Обращение к Кредитной машине ФЛ, AEF")
-    await message.answer(f"⚙️Вызов Agent Оценки ФЛ")
+    await message.answer(f"⚙️Вызов Агента Оценки ФЛ")
     await asyncio.sleep(1)
     await message.answer(
-        "*Получение внутренних данных*\n\n"
-        "• Транзакции\n"
-        "• Цифровой двойник\n"
-        "• Стоп-лист\n"
-        "• Внутренний антифрод\n"
-        "• Продуктовой профиль\n"
-        "• IDP(RAG)\n",
-        parse_mode="Markdown"
+        "Получение заключения от Агента ФЛ"
     )
     await message.answer(f"Формирование финального заключения")
     await asyncio.sleep(3)
