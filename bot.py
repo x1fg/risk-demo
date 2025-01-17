@@ -31,9 +31,7 @@ async def handle_company_name(message: Message, state: FSMContext):
     await message.answer(
         "*Получение данных по сделке*\n\n"
         "🔍 Обращение к:\n\n"
-        "• АС Байкал\n"
-        "• Risk RAG\n"
-        "• FS Online\n",
+        "• АС Байкал\n",
         parse_mode="Markdown"
     )
     await asyncio.sleep(2)
@@ -67,6 +65,8 @@ async def handle_deal_info(message: Message, state: FSMContext):
     await asyncio.sleep(1)
     await message.answer(f"⚙️Вызов Агента Эксперт деловой репутации")
     await asyncio.sleep(1)
+    await message.answer("Необходимо проанализировать Акционеров, Бенифициаров и Лиц принимающих решение.")
+    await asyncio.sleep(1)
     await message.answer(
         "*Выбор необходимых инструментов:*\n\n"
         "• API анализ ФЛ\n"
@@ -74,8 +74,6 @@ async def handle_deal_info(message: Message, state: FSMContext):
         "• API поиск\n",
         parse_mode="Markdown"
     )
-    await asyncio.sleep(1)
-    await message.answer("Необходимо проанализировать Акционеров, Бенифициаров и Лиц принимающих решение.")
     await asyncio.sleep(1)
     await message.answer(f"Обращение к Кредитной машине ФЛ, AEF.")
     await asyncio.sleep(1)
