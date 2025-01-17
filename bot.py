@@ -35,7 +35,7 @@ async def handle_company_name(message: Message, state: FSMContext):
         parse_mode="Markdown"
     )
     await asyncio.sleep(2)
-    await message.answer('Данные по сделке успешно получены из систем.')
+    await message.answer('Данные по сделке успешно получены из системы.')
     await asyncio.sleep(1)
     await message.answer('Введите дополнительные подробности сделки(оционально).\n\nЕсли дополнительных подробностей нет, введите:\n "Нет дополнительной информации."')
     await state.set_state(DealForm.deal_info)
@@ -63,7 +63,7 @@ async def handle_deal_info(message: Message, state: FSMContext):
         parse_mode="Markdown"
     )
     await asyncio.sleep(1)
-    await message.answer(f"⚙️Вызов Агента Эксперт деловой репутации")
+    await message.answer(f"⚙️Вызов Агента Эксперт деловой репутации.")
     await asyncio.sleep(1)
     await message.answer("Необходимо проанализировать Акционеров, Бенифициаров и Лиц принимающих решение.")
     await asyncio.sleep(1)
